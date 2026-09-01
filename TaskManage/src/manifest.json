@@ -1,0 +1,35 @@
+{
+  "name": "TaskManage",
+  "appid": "__UNI__TASKMANAGE",
+  "description": "A calm cross-platform task companion",
+  "versionName": "0.1.0",
+  "versionCode": "1",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "safearea": {
+      "background": "#F6F4EE",
+      "bottom": {
+        "offset": "none"
+      }
+    },
+    "distribute": {
+      "android": {
+        "permissions": [
+          "android.permission.CAMERA",
+          "android.permission.VIBRATE",
+          "android.permission.POST_NOTIFICATIONS"
+        ]
+      },
+      "ios": {
+        "capabilities": {
+          "push": true
+        }
+      }
+    }
+  },
+  "h5": {
+    "title": "TaskManage"
+  }
+}
