@@ -1,8 +1,8 @@
-# TaskMate
+# TaskManage
 
-![TaskMate logo](app/src/main/app_logo-playstore.png)
+![TaskManage logo](app/src/main/app_logo-playstore.png)
 
-TaskMate 是一款基于 Android 的轻量任务管理与日常工具应用。用户可以注册并登录本地账号，创建和管理任务，设置闹钟，也可以使用手电筒和前置摄像头镜像功能。
+TaskManage 是一款基于 Android 的轻量任务管理与日常工具应用。用户可以注册并登录本地账号，创建和管理任务，设置闹钟，也可以使用手电筒和前置摄像头镜像功能。
 
 ## 功能
 
@@ -80,10 +80,10 @@ app/build/outputs/apk/debug/app-debug.apk
 ## 项目结构
 
 ```text
-TaskMate/
+TaskManage/
 ├── app/
 │   └── src/main/
-│       ├── java/com/example/TaskMate/
+│       ├── java/com/example/TaskManage/
 │       │   ├── Adapter/       # RecyclerView 适配器
 │       │   ├── Model/         # 用户、任务和闹钟实体
 │       │   ├── Repository/    # 任务数据访问封装
@@ -109,7 +109,7 @@ TaskMate/
 
 ## 当前实现说明
 
-TaskMate 目前是本地演示型应用，适合学习 Android Activity、Room、LiveData 和设备能力调用。使用前请注意：
+TaskManage 目前是本地演示型应用，适合学习 Android Activity、Room、LiveData 和设备能力调用。使用前请注意：
 
 - 用户名和密码保存在本地 Room 数据库中，当前未接入服务器，也未进行密码加密；请勿使用真实账号密码。
 - 闹钟页面中的当前用户 ID 和日期生成逻辑仍是示例实现，正式使用前需要改为读取实际登录用户，并完善日期处理。
