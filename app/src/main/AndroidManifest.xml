@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.TaskMate"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" android:maxSdkVersion="32"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 应用需要的权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_ALARM"/>
+    <!-- 应用程序声明 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="true"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.Light"
+        tools:targetApi="31">
+
+        <!-- 账号管理活动 -->
+        <activity
+            android:name=".AccountActivity"
+            android:exported="false" />
+
+        <!-- 用户注册活动 -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <!-- 用户登录活动 -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light.NoActionBar" />
+
+        <!-- 修改密码活动 -->
+        <activity
+            android:name=".ChangePasswordActivity" />
+
+        <!-- 主活动 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 添加任务活动 -->
+        <activity
+            android:name=".AddTask"
+            android:label="Add Task"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- Alarm -->
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="true" />
+
+        <!-- about us -->
+        <activity
+            android:name=".about_us"/>
+
+        <!-- Mirror -->
+        <activity
+            android:name=".ViewModel.MirrorActivity"/>
+
+        <!-- Flashlight -->
+        <activity
+            android:name=".ViewModel.FlashlightActivity"/>
+
+        <!-- 注册 AlarmRingActivity -->
+        <activity
+            android:name=".AlarmRingActivity"
+            android:exported="true" />
+
+        <!-- 注册 AlarmReceiver -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+    </application>
+</manifest>

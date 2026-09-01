@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_cream"
+    tools:context=".AccountActivity">
+
+    <!-- 标题 TextView: User info -->
+
+    <!-- 问题 TextView: What do you want -->
+
+    <!-- 更改密码按钮 -->
+
+    <TextView
+        android:id="@+id/Userinfo"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="User name: "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ask01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+        android:id="@+id/ask01"
+        android:layout_width="227dp"
+        android:layout_height="62dp"
+        android:padding="16dp"
+        android:text="What do you want?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/ChangePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Userinfo"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/ChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Your Password"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ask01"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- 关于开发者按钮 -->
+    <Button
+        android:id="@+id/Us"
+        android:layout_width="169dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black"
+        android:padding="12dp"
+        android:text="About Developers"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ChangePassword" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
